@@ -1,9 +1,7 @@
 Basics
-	Datatypes
-	Operators
-	Loops
-	Pointer	
-	multiple files	
+.	Datatypes
+.	Pointer	
+.	multiple files	
 
 Terminal
 	I/O ->Terminal, ->Datein 

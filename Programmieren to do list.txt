@@ -2,15 +2,16 @@ Basics
 .	Datatypes
 .	Pointer	
 .	multiple files	
+	Struct
 
 Terminal
 	I/O ->Terminal, ->Datein 
 	make file	
 
 Data Structures
-	Array
-	Matrix
-	Stack, Queue
+.	Array
+	Stack
+	Queue
 	Linked List
 	Tree
 	Hashing

@@ -1,4 +1,6 @@
 Basics
+	Hello World
+	Reading Input
 	Datatypes
 	Operators
 	Loops

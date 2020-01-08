@@ -11,7 +11,7 @@ Terminal
 
 Data Structures
 .	Array
-	Stack
+.	Stack
 	Queue
 	Linked List
 	Tree

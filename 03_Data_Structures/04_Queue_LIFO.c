@@ -1,17 +1,18 @@
 /**
  *         @author Robert Simon
  * 
- *          @title: Queue First in First Out     
+ *          @title: Queue LAst in first Out    
  * 
  * 
  *              Queue
  * 
  * 
- *         first        last
+ *       first           last
  *       +---+   +---+   +---+
  *       | 3 |-->| 2 |-->| 1 |-> NULL
  *       +---+   +---+   +---+  
- *      remove             add
+ *      remove       
+ *        add
  */ 
 
 #include<stdio.h>
@@ -73,7 +74,7 @@ void add(struct Queue *queue, int item){
         //create Node
         struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
         newNode->item =item;
-        newNode->next = NULL;
+        newNode->next = queue->first;
 
         // no item in queue
         if (!(queue->first && queue->last)){
@@ -84,10 +85,9 @@ void add(struct Queue *queue, int item){
         }
 
         //add in Queue
-        queue->last->next = newNode;
-        queue->last = newNode;
+        queue->first = newNode;
 
-        printf("add: %d \n",queue->last->item);
+        printf("add: %d \n",queue->first->item);
 }
 
 void removeNode(struct Queue *queue){

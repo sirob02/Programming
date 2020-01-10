@@ -3,6 +3,7 @@ Basics
 .	Pointer	
 .	multiple files	
 	Struct
+.	variadic functions
 
 
 Terminal

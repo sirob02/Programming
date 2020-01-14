@@ -18,38 +18,17 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-struct table_node{
-    int key;
-    struct node *next;
-    struct table_node *nextTableNode;
-};
-
-struct node{
-    int key;
-    struct node *next;
-};
-
-
-struct table{
-    struct table_node *first;
-};
-
-
-typedef struct node node;
-typedef struct table table;
-typedef struct table_node table_node;
-
-
 //functions
 int hashCode(int key);
-table *iniHashtable(int size);
-void printTable(table *table);
+int iniHashtable(int size);
+void printTable(int *table,int size);
 
 
 int main(){
 
-    table *hashtable = iniHashtable(10);
-    printTable(hashtable);
+    int size = 10;
+    int *hashtable = iniHashtable(size);
+    printTable(hashtable,size);
 
 
 
@@ -61,40 +40,27 @@ int hashCode(int key){
    return key % 10;
 }
 
-table *iniHashtable(int size){
-    table *hashtable= (table*)malloc(sizeof(table));
-
-    hashtable->first = (table_node*)malloc(sizeof(table_node));
-    hashtable->first->key = 0;
-    hashtable->first->next = NULL;
-
-    table_node *tmp=hashtable->first->nextTableNode;
-    for (int i = 1; i < size; i++){
-        table_node *newNode = (table_node*)malloc(sizeof(table_node));
-        newNode->key=i;
-        newNode->next = NULL;
-        
-        tmp->nextTableNode =newNode;
-        tmp=newNode;
-    }
+//initalise the hashtable
+int *iniHashtable(int size){
     
+    int *hashtable= (int*)calloc(size,sizeof(int));
+    
+    for (int i = 0; i < size; i++){
+        *(hashtable+i)=i;
+    }
+
     return hashtable;
 }
 
-void printTable(table *table){
-    table_node *currentY = table->first;
+void printTable(int *table,int size){
+    
 
-    while (!currentY->nextTableNode){
-
-        printf(" %d ->",currentY->key);
-        node *currentX = currentY->next;
-        
-        while (!currentX->next){
-            printf(" %d ->", currentX->key);
-            currentX=currentX->next;
+    for (int y = 0; i < size; i++){
+        for (int x= 0; i < count; i++)
+        {
+            /* code */
         }
-        printf("\n");
         
-        currentY=currentY->nextTableNode;       
     }
+    
 }

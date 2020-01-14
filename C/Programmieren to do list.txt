@@ -13,9 +13,8 @@ Terminal
 Data Structures
 .	Array
 .	Stack
-	Queue
-	Linked List
-	Tree
+.	Queue
+.	Linked List
 	Hashing
 	Graph
 		BFS
@@ -29,14 +28,14 @@ Data Structures
 	Laufzeiten
 		
 Algorithms
-	Searching
+	Sorting
 		Insertion
 		Selection
 		Bubble
 		Quick
 		Merge
 		Heap
-	Sorting
+	Searching
 		linear 
 		Binary
 	Recursion

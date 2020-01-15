@@ -50,10 +50,18 @@ int main(){
 
     table *hashtable = iniHashtable(size);
     printTable(hashtable,size);
-    int firstKey = 5;
-    add(hashtable,firstKey);
+    add(hashtable,5);
     printTable(hashtable,size);
-    removeKey(hashtable,5);
+    removeKey(hashtable,6);
+    printTable(hashtable,size);
+
+    for (int i = 0; i < 20; i++){
+        add(hashtable,i);
+    }
+    removeKey(hashtable, 5);
+    
+
+    printTable(hashtable,size);
 
     return 0;
 }
@@ -104,19 +112,32 @@ void removeKey(table *hashtable, int key){
     //iterate Y
     while (currentY){
         if (currentY->key == place){       
+            
+            
             //Error check
             if (!currentY->next){
-                printf("Error: Element not found!");
+                printf("Error: Element not found!\n");
                 return;
             }
+
             //iterate X
             node *currentX = currentY->next;
+            //check first node
+            if (currentX->key==key){
+                currentY->next= currentX->next;
+                free(currentX);
+                return;
+            }
+
+            
+            //iterate X
             while (currentX->next->key != key){
                 currentX=currentX->next;
             }
+        
             //Error check
             if (currentX->next->key != key ){
-                printf("Error2: Element not found!");
+                printf("Error2: Element not found!\n");
                 return;
             }
             node* tmp = currentX->next;

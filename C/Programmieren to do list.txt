@@ -29,9 +29,9 @@ Data Structures
 		
 Algorithms
 	Sorting
-		Insertion
-		Selection
-		Bubble
+.		Insertion
+.		Selection
+.		Bubble
 		Quick
 		Merge
 		Heap

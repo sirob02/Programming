@@ -27,16 +27,16 @@ struct prio_q * prio_q_create() {
 }
 
 void prio_q_push(struct prio_q *q, void *data, int prio) {
-	
+	//Error no queue
 	if (!q){
 		perror("No Queue");
 	}
 	q->size++;
+	//Check 1st Element
 	if (!q->first){
 		struct elem *newElem = (struct elem*)malloc(sizeof(struct elem)); 
 		newElem->data=data;
 
-		newElem->prev=NULL;
 		newElem->next=NULL;
 		newElem->prio=prio;
 
@@ -45,30 +45,35 @@ void prio_q_push(struct prio_q *q, void *data, int prio) {
 	}
 
 	struct elem *loop = q->first;
+
 	struct elem *newElem = (struct elem*)malloc(sizeof(struct elem)); 
-		newElem->data=data;
-		newElem->prio=prio;
+	newElem->data=data;
+	newElem->prio=prio;
 
-
-	while (loop->next){
-			if (loop->prio > newElem->prio ){
-				loop=loop->next;
+	//look for prev item
+	while (loop){
+			if (newElem->prio > q->first->prio){
+				break;
 			}
-			loop=loop->prev;
-			break;
+			
+			if (!loop->next){
+				break;
+			}
+			if (loop->next->prio < newElem->prio ){
+				break;
+			}
+			loop=loop->next;
 	}
-	if (newElem->prio > q->first->prio ){
-		q->first=newElem;
-	}
-	
 
+	if (newElem->prio > q->first->prio){
+				//first is higher
+				newElem->next =loop ;
+				q->first=newElem;
+				return;
+	}
 	newElem->next=loop->next;
-	newElem->prev=loop;
 	loop->next=newElem;
 
-	if (newElem->next){
-		loop->next->next->prev=newElem;
-	}
 	// TODO
 	
 }
@@ -110,7 +115,6 @@ void print_q(struct prio_q *q){
 		printf(" %d -> ", tmp->prio);
 		tmp=tmp->next;
 	}
-	printf(" %d -> NULL \n", tmp->prio);
-	 
+	 printf("\n");
 
 }

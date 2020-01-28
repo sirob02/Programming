@@ -5,6 +5,7 @@ struct prio_q;
  * Returns pointer to priority queue.
  */
 struct prio_q * prio_q_create();
+void print_q(struct prio_q *q);
 
 /**
  * Pushes data to queue with given priority

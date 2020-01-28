@@ -11,15 +11,18 @@ int main()
 	queue = prio_q_create();
 
 	prio_q_push(queue, "amet...", 2);
+//	print_q(queue);
 	prio_q_push(queue, "ipsum", 7);
+	print_q(queue);
 	prio_q_push(queue, "dolor", 4);
+	print_q(queue);
 //	prio_q_push(queue, "Lorem", 22);
 //	prio_q_push(queue, "sit", 3);
 
 //	prio_q_push(queue, "Hello World", 1);
 //	prio_q_push(queue, "Bye World", 0);
 
-
+/*
 	for (i = 0; i < 3; i++) {
 		s = prio_q_pop(queue);
 		printf("%s\n", s);

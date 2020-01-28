@@ -25,7 +25,7 @@ struct prio_q * prio_q_create() {
 
 	// TODO 
 }
-void print_q(struct prio_q *q);
+
 void prio_q_push(struct prio_q *q, void *data, int prio) {
 	
 	if (!q){

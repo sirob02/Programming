@@ -28,15 +28,12 @@ Algorithms
 .		Insertion
 .		Selection
 .		Bubble
-.		Quick
-.		Merge
-.		Heap
+.		Quick	->binary strategy
+.		Merge	->uses sub arrays
+.		Heap	->Tree -> heapif(Selectionsort)
 	Searching
-		linear 
-		Binary
-	Recursion
-		Divide and Conquer
-	Greedy
+.		linear 
+.		Binary
 	Dynamic Programming
 	Backtracking
 

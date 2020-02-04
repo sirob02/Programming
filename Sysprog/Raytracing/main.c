@@ -28,6 +28,9 @@ int main(int argc, char** argv)
 
 	/* TODO: divide work load and create n child processes */
 
+	ray_renderScene();
+
+
 	/* TODO: each child process renders it's part of the image and saves it to an individual file;
 			 the parent process meanwhile waits for children to finish their work
 	*/

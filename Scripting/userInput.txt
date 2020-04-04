@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "This is a User Input script" && echo "Bitte gib eine Zahl ein"
+read Zahl
+
+x=$(($Zahl+3))
+clear
+echo "Deine Zahl +3  ist $x"

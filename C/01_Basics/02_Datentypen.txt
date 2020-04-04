@@ -8,3 +8,5 @@ Float 	4	-2hoch32 ... 2hoch32
 double	8	-2hoch64 ... 2hoch64
 
 1 Byte = 8 Bit 
+
+Test

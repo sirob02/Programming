@@ -1,0 +1,5 @@
+#!/bin/bash
+
+find . -iname "*.txt" | while read f ;  do
+	echo $f
+done

@@ -1,9 +1,9 @@
 /**
  *  @author Robert Simon
- * 
+ *
  *  @title: Hello World
- * 
- */ 
+ *
+ */
 #include<iostream>
 using namespace std;
 
@@ -14,12 +14,3 @@ int main(){
 
     return 0;
 }
-
-
-
-
-
-
-
-
-

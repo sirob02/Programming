@@ -5,13 +5,8 @@
     "tasks": [
         {
             "type": "shell",
-<<<<<<< HEAD
-            "label": "gcc build active file",
-            "command": "/usr/bin/gcc",
-=======
             "label": "clang build active file",
             "command": "/usr/bin/clang",
->>>>>>> 07460392f033a63b36e618fa693acf618c46870d
             "args": [
                 "-g",
                 "${file}",
@@ -23,12 +18,8 @@
             },
             "problemMatcher": [
                 "$gcc"
-<<<<<<< HEAD
             ],
             "group": "build"
-=======
-            ]
->>>>>>> 07460392f033a63b36e618fa693acf618c46870d
         }
     ]
 }

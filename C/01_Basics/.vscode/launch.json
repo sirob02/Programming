@@ -5,28 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-<<<<<<< HEAD
-            "name": "gcc - Aktive Datei erstellen und debuggen",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/a.out",
-=======
+            "type": "lldb",
+            "request": "attach",
+            "name": "Attach",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}"
+        },
+       
+
+        {
             "name": "clang build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
->>>>>>> 07460392f033a63b36e618fa693acf618c46870d
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-<<<<<<< HEAD
-            "preLaunchTask": "gcc build active file"
-=======
-            "preLaunchTask": "clang build active file"
->>>>>>> 07460392f033a63b36e618fa693acf618c46870d
+            "preLaunchTask": "clang build active file",
+
         }
     ]
 }

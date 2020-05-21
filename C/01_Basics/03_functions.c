@@ -1,1 +1,0 @@
-void Output(int i);
